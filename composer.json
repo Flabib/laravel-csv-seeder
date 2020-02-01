@@ -1,11 +1,11 @@
 {
-	"name": "jeroenzwart/laravel-csv-seeder",
+	"name": "flabib/laravel-csv-seeder",
 	"description": "Seed the database with Laravel using CSV files",
-	"homepage": "https://github.com/jeroenzwart/laravel-csv-seeder",
+	"homepage": "https://github.com/Flabib/laravel-csv-seeder",
 	"authors": [
 		{
-			"name": "Jeroen Zwart",
-			"email": "mailme@jeroenzwart.nl"
+			"name": "Fahdi Labib",
+			"email": "fahdilabib@gmail.com"
 		}
 	],
 	"keywords": [ "laravel", "csv", "excel", "seed", "seeds", "seeder", "seeding"],
@@ -17,13 +17,13 @@
 	},
 	"autoload": {
 		"psr-4": {
-			"JeroenZwart\\CsvSeeder\\": "src/"
+			"Flabib\\CsvSeeder\\": "src/"
 		}
 	},
 	"extra": {
 		"laravel": {
 			"providers": [
-				"JeroenZwart\\CsvSeeder\\CsvSeederServiceProvider"
+				"Flabib\\CsvSeeder\\CsvSeederServiceProvider"
 			]
 	    }
 	}

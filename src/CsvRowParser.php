@@ -1,6 +1,6 @@
 <?php
 
-namespace JeroenZwart\CsvSeeder;
+namespace Flabib\CsvSeeder;
 
 use Validator;
 use Hash;
@@ -10,7 +10,7 @@ class CsvRowParser
     private $header;
     private $defaults     = [];
     private $timestamps   = TRUE;
-    private $hashable     = ['password'];
+    private $hashable     = [];
     private $validate     = [];
     private $encode       = TRUE;
 

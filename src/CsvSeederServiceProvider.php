@@ -1,6 +1,6 @@
 <?php
 
-namespace JeroenZwart\CsvSeeder;
+namespace Flabib\CsvSeeder;
 
 use Illuminate\Support\ServiceProvider;
 

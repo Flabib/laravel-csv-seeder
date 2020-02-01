@@ -13,15 +13,15 @@ With this package you can save time for seeding your database. Instead of typing
 - Adjust Laravel's timestamp at seeding.
 
 ## Installation
-- Require this package directly by `composer require --dev jeroenzwart/laravel-csv-seeder`
+- Require this package directly by `composer require --dev Flabib/laravel-csv-seeder`
 - Or add this package in your composer.json and run `composer update`
 
-    "jeroenzwart/laravel-csv-seeder": "1.*"
+    "Flabib/laravel-csv-seeder": "1.*"
 
 ## Basic usage
-Extend your seed classes with `JeroenZwart\CsvSeeder\CsvSeeder` and set the variable `$this->file` with the path of the CSV file. Tablename is not required, if the filename of the CSV is the same as the tablename. At last call `parent::run()` to seed. A seed class will look like this;
+Extend your seed classes with `Flabib\CsvSeeder\CsvSeeder` and set the variable `$this->file` with the path of the CSV file. Tablename is not required, if the filename of the CSV is the same as the tablename. At last call `parent::run()` to seed. A seed class will look like this;
 ```php
-use JeroenZwart\CsvSeeder\CsvSeeder;
+use Flabib\CsvSeeder\CsvSeeder;
 
 class UsersTableSeeder extends CsvSeeder
 {

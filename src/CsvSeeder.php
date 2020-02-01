@@ -1,11 +1,11 @@
 <?php
 
-namespace JeroenZwart\CsvSeeder;
+namespace Flabib\CsvSeeder;
 
 use DB;
 use Illuminate\Database\Seeder;
-use JeroenZwart\CsvSeeder\CsvHeaderParser as CsvHeaderParser;
-use JeroenZwart\CsvSeeder\CsvRowParser as CsvRowParser;
+use Flabib\CsvSeeder\CsvHeaderParser as CsvHeaderParser;
+use Flabib\CsvSeeder\CsvRowParser as CsvRowParser;
 
 class CsvSeeder extends Seeder
 {
@@ -72,7 +72,7 @@ class CsvSeeder extends Seeder
      *
      * @var array
      */
-    public $hashable;
+    public $hashable = ['password'];
 
     /**
      * Array with Laravel Validation rules
@@ -179,7 +179,7 @@ class CsvSeeder extends Seeder
      */
     private function checkFilepath()
     {
-        $this->filepath = base_path() . $this->file;
+        $this->filepath = $this->file;
 
         if( file_exists( $this->filepath ) || is_readable( $this->filepath ) ) return TRUE;
 
@@ -273,7 +273,7 @@ class CsvSeeder extends Seeder
      */
     private function openCSV()
     {
-        $this->csvData = fopen( $this->filepath, 'r' );;
+        $this->csvData = fopen( $this->filepath, 'r' );
     }
 
     /**
@@ -336,7 +336,7 @@ class CsvSeeder extends Seeder
             if( $this->offset > 0 ) continue;
     
             if( empty($row) ) continue;
-                    
+  
             $parsed = $parser->parseRow( $row );
             
             if( ! $parsed ) continue;
